@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "ZCOOL QingKe HuangYou", sans-serif;
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 0 20px;
+}
+
+.app form {
+  padding: 20px;
+  background-color: rgb(52, 111, 163);
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 700px;
+  gap: 30px;
+  border-radius: 8px;
+}
+.app form #filter {
+  align-self: end;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  font-weight: 700;
+}
+.app form #filter:hover {
+  cursor: pointer;
+}
+.app form .header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app form .create_space {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.app form .create_space .btn-create {
+  padding: 8px;
+  border-radius: 8px;
+  width: 50px;
+  font-weight: 1000;
+  font-size: 15px;
+}
+.app form .create_space .btn-create:hover {
+  background-color: rgb(62, 59, 59);
+  color: white;
+  cursor: pointer;
+}
+.app form .create_space .input_todo {
+  flex: 1;
+  height: 30px;
+  font-size: 15px;
+  text-indent: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 2px;
+  font-weight: 700;
+}
+.app form .search {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app form .search .div_search {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.app form .search .div_search #search-input {
+  flex: 1;
+  height: 35px;
+  font-size: 15px;
+  text-indent: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 2px;
+  font-weight: 700;
+}
+.app form .search .div_search .backspace {
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 8px;
+  width: 50px;
+  font-weight: 1000;
+}
+.app form .search .div_search .backspace:hover {
+  background-color: rgb(88, 87, 87);
+  cursor: pointer;
+  color: white;
+}
+.app form .filterMonth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(14, 14, 14);
+}
+.app form .filterMonth .filter_prev, .app form .filterMonth .filter_next {
+  background-color: rgb(95, 93, 93);
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+}
+.app form .filterMonth .filter_prev:hover, .app form .filterMonth .filter_next:hover {
+  background-color: rgb(185, 177, 177);
+  color: brown;
+}
+.app form .filterMonth .filter_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app form .filterMonth .filter_info span {
+  color: rgb(242, 242, 242);
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+}
+.app form .main {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 50%;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: rgb(45, 45, 45);
+  border-radius: 8px;
+}
+
+.main .todo {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(20, 20, 21);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.main .todo .todo_date {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Caveat", cursive;
+}
+.main .todo .val-rem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+}
+.main .todo .val-rem p {
+  flex: 1;
+  font-weight: 700;
+  color: blue;
+}
+.main .todo .val-rem button {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.main .todo .todo_info {
+  display: flex;
+  align-items: center;
+}
+.main .todo .todo_title {
+  flex: 1;
+  padding: 5px 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main .todo .done,
+.main .todo .edit,
+.main .todo .remove {
+  padding: 5px 10px;
+  margin-left: 2px;
+}
+.main .todo .done:hover,
+.main .todo .edit:hover,
+.main .todo .remove:hover {
+  background-color: rgb(88, 87, 87);
+  cursor: pointer;
+  color: white;
+}
+.main .todo .done {
+  color: rgb(45, 82, 8);
+}
+.main .todo .remove {
+  color: rgb(0, 51, 255);
+}
+
+.main .todo.done {
+  background-color: rgb(95, 95, 95);
+  outline: 2px solid rgb(8, 203, 63);
+}
+
+.main .todo .hidden {
+  display: none;
+}
+
+.app #edit-form {
+  padding: 60px 20px;
+  background-color: rgb(52, 111, 163);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 500px;
+  border-radius: 8px;
+  height: auto;
+}
+.app #edit-form .input_edit {
+  height: 30px;
+  font-size: 20px;
+  text-indent: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+.app #edit-form .btn-cancelEdit, .app #edit-form .btn-edit {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+}
+.app #edit-form .btn-cancelEdit:not(.btn-cancelEdit):hover, .app #edit-form .btn-edit:not(.btn-cancelEdit):hover {
+  cursor: pointer;
+  background-color: rgb(24, 220, 115);
+  color: white;
+}
+.app #edit-form .btn-cancelEdit:not(.btn-edit):hover, .app #edit-form .btn-edit:not(.btn-edit):hover {
+  cursor: pointer;
+  background-color: rgb(220, 37, 17);
+  color: white;
+}
+
+.app form.hide {
+  display: none;
+}
+
+.app #edit-form.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

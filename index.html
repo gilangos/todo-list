@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <form>
+        <select name="filter" id="filter">
+          <option selected disabled>filtrar</option>
+          <option value="done">Done</option>
+          <option value="all">all</option>
+        </select>
+        <div class="header">
+          <h2>adicione uma tarefa:</h2>
+          <div class="create_space">
+            <input type="text" class="input_todo" />
+            <button class="btn-create"><i class="fa-thin fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="search">
+            <h2>Pesquisar:</h2>
+            <div class="div_search">
+                <input type="search" name="search" id="search-input" placeholder="ex: todo name...">
+                <button class="backspace"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+        </div>
+        <div class="filterMonth">
+          <button onclick="preMonth()" class="filter_prev"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="filter_info">
+            <span>Mês</span>
+            <span id="filter_data"></span>
+          </div>
+          <button onclick="nextMonth()" class="filter_next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="main">
+            <!-- <div class="todo">
+              <span class="todo_date"></span>
+              <article class="">
+                <p>tem certeza que deseja excluir?</p>
+                <button class="remove-db">sim</button>
+                <button  onclick="handleToggle()">nao</button>
+              </article>
+              <article class="todo_info hidden">
+                <h4 class="todo_title" title="bonjur">boa noite</h4>
+                <button class="done">done</button>
+                <button class="edit">edit</button>
+                <button class="remove">remove</button>
+              </article>
+            </div>   -->
+        </div>
+      </form>
+      <form id="edit-form" class="hide">
+            <h2>edite sua tarefa:</h2>
+            <input type="text" class="input_edit" />
+            <div class="edit btns">
+                <button class="btn-edit"><i class="fa-solid fa-check-double"></i></button>
+                <button class="btn-cancelEdit">cancelar</button>
+            </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
