@@ -25,7 +25,7 @@ Projeto CRUD, feito com html, css e javascript, o projeto tem o intuito de criar
 </p>
 
 <p align="center">
-  <img src=".github/Repeated.png" width="100%" />
+  <img src=".github/repeated.png" width="100%" />
 </p>
 
 <p align="center">
