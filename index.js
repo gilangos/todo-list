@@ -268,9 +268,10 @@ const repeatedTodo = (title) =>{
 let getdata = new Date()
 let x = getdata.getMonth()
 
+
 const preMonth = ()=> {
     x--
-    let data = new Date(2022,x)
+    let data = new Date(getdata.getFullYear(),x)
     let mes = data.getMonth() + 1;
     let ano = data.getFullYear()
     let text = mes < 10 ? `0${mes}-${ano}` : `${mes}-${ano}`
@@ -282,7 +283,7 @@ const preMonth = ()=> {
 }
 const nextMonth = ()=> {
     x++
-    let data = new Date(2022,x)
+    let data = new Date(getdata.getFullYear(),x)
     let mes = data.getMonth() + 1
     let ano = data.getFullYear()
     let text = mes < 10 ? `0${mes}-${ano}` : `${mes}-${ano}` 
